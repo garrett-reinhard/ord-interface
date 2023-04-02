@@ -41,7 +41,7 @@ cd ..
 
 # Client.
 psql -p 5432 -h localhost -U postgres -c 'CREATE DATABASE ord;'
-wget --no-clobber https://github.com/open-reaction-database/ord-data/raw/main/data/89/ord_dataset-89b083710e2d441aa0040c361d63359f.pb.gz
+wget --no-clobber https://github.com/open-reaction-database/ord-data/raw/main/data/48/ord_dataset-48929f64ce614f1181a555eafd7c97a6.pb.gz
 python client/build_database.py --input="*.pb.gz"
 
 # Save and shut down the container.
