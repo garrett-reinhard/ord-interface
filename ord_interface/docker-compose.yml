@@ -19,6 +19,7 @@ services:
     command: [ "postgres", "-c", "log_statement=all" ]
     ports:
       - "5432:5432"
+    shm_size: 5gb
   web:
     depends_on:
       - database
@@ -31,3 +32,5 @@ services:
     image: "openreactiondatabase/ord-interface:latest"
     ports:
       - "5001:5001"
+
+
